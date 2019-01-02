@@ -17,8 +17,8 @@
 \define@key{mcb}{bg}{\def\@mcb@bg{#1}}
 \define@key{mcb}{width}{\setlength\@mcb@width{#1}}
 \newcommand{\sectioninverttitle}[2][]{{%
-  \setkeys{mcb}{width=0.5\linewidth,bg=blackbg,#1}%
-  \colorbox{\@mcb@bg}{\begin{minipage}{\@mcb@width}
+    \setkeys{mcb}{width=0.5\linewidth,bg=blackbg,#1}%
+    \colorbox{\@mcb@bg}{\begin{minipage}{\@mcb@width}
     \strut#2\strut
   \end{minipage}}
 }}

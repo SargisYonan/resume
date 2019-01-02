@@ -1,0 +1,219 @@
+%% Resume
+% @author Sargis Yonan
+
+%% PREAMBLE
+\documentclass[letterpaper,11pt,oneside,a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage[english]{babel}
+\setmainfont[Mapping=text-tex]{Arial}
+
+%% Sectioning commands
+% everything for inverted section title boxes
+\usepackage{xcolor,keyval}
+\makeatletter
+\definecolor{blackbg}{rgb}{0.0,0.0,0.0}
+\newlength{\@mcb@width}
+\define@key{mcb}{bg}{\def\@mcb@bg{#1}}
+\define@key{mcb}{width}{\setlength\@mcb@width{#1}}
+\newcommand{\sectioninverttitle}[2][]{{%
+  \setkeys{mcb}{width=0.5\linewidth,bg=blackbg,#1}%
+  \colorbox{\@mcb@bg}{\begin{minipage}{\@mcb@width}
+    \strut#2\strut
+  \end{minipage}}
+}}
+\makeatother
+
+%% Section title code (black background, white text)
+\newcommand{\sectiontitle}[1]{\sectioninverttitle[width=0.135\textwidth]{\textcolor{white}{\textbf{\normalsize{#1}}}}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+%% Bullet pointing commands
+\usepackage{amssymb}
+\newcommand{\blacksquarebullet}{\tiny{\ensuremath{\blacksquare}}}
+\newcommand{\squareitem}[1]{\item[\blacksquarebullet]{#1}}
+\usepackage{enumitem}
+\setlist{nosep}
+
+%% Margins settings
+\usepackage[left=0.4in, right=0.5in, bottom=0.5in, top=0.5in, headheight=14pt, footskip=14pt]{geometry}
+\usepackage[geometry]{ifsym}
+
+\def \tablefillwidth {0.98\linewidth}
+
+%% For overall table format
+\usepackage{longtable}
+
+%Changes the page numbers - {arabic}=arabic numerals, {gobble}=no page numbers, {roman}=Roman numerals
+\pagenumbering{gobble}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\footnotesize{\textcolor{gray}{Sargis Yonan}}}
+%% END OF PREAMBLE 
+
+\begin{document}
+
+%% HEADER NAME
+\noindent {\Huge{\textbf{Sargis Yonan}}} \\
+\normalsize \vspace{1em}
+\noindent Robotics \& Computer Engineer
+
+\vspace{0.2in}
+
+%%% BEGIN LONG TABLE
+\begin{longtable}{@{\extracolsep{\fill}} p{0.15\textwidth} p{0.8\textwidth}}
+
+%% CONTACT
+\sectiontitle{CONTACT}
+& \hspace*{\fill}
+\begin{tabular}[t]{l r}
+    \textbf{Email}: & \href{mailto:sargis@yonan.org}{sargis@yonan.org} \\
+
+    \textbf{Website}: & \href{http://www.sargis.yonan.org}{sargis.yonan.org}\\
+
+    \textbf{LinkedIn}: & \href{https://www.linkedin.com/in/sargisyonan/}{sargisyonan}\\
+
+    \textbf{GitHub}: & \href{https://github.com/SargisYonan}{SargisYonan}\\
+
+    \textbf{Location}: & Santa Cruz, California \\
+
+    \textbf{Phone}: & +1 (209) 417-7976 \\
+
+\end{tabular}
+\vspace{1em}
+\\
+
+%% EDUCATION
+\sectiontitle{EDUCATION}
+&
+%% Masters
+\begin{tabular}[t]{@{\extracolsep{\fill}} p{\tablefillwidth}}
+    {\large{\textbf{M.Sc. in Computer Engineering}}} \hspace*{\fill} \textbf{September 2017 -- December 2018} \\
+
+    Emphasis in Robotics Engineering \& Control Theory \\
+    University of California, Santa Cruz \\
+    \begin{enumerate}[leftmargin=*]
+        \squareitem Courses in Robotics, Optimal Estimation, Stochastic Filtering, Control Theory
+        \squareitem Thesis: \href{http://www.yonan.org/masters_thesis}{Improved Field Exploration with Variance Suppressing Path Planning}
+        \squareitem Autonomous Systems Lab
+    \end{enumerate}
+\end{tabular} \\
+&
+%% Bachelors
+\begin{tabular}[t]{@{\extracolsep{\fill}} p{\tablefillwidth}}
+    {\large{\textbf{B.S. in Computer Engineering}}} \hspace*{\fill} \textbf{September 2013 -- June 2017} \\
+
+    Concentration in Robotics \& Control \\
+    University of California, Santa Cruz \\
+    \begin{enumerate}[leftmargin=*]
+        \squareitem Project/Research Topics: UAVs, Sensor Node Networking, Power Systems
+        \squareitem Graduated with Honors in Major
+    \end{enumerate}
+\end{tabular} \\
+&
+%% Minor
+\begin{tabular}[t]{@{\extracolsep{\fill}} p{\tablefillwidth}}
+    {\large{\textbf{Minor in Computer Science}}} \hspace*{\fill} \textbf{September 2013 -- June 2017} \\
+
+    University of California, Santa Cruz \\
+\end{tabular}
+\vspace{1em}
+\\
+
+%% EXPERIENCE
+\sectiontitle{EXPERIENCE}
+&
+%% SpaceX
+\begin{tabular}[t]{@{\extracolsep{\fill}} p{\tablefillwidth}}
+{\large{\textbf{SpaceX}}} \hspace*{\fill} \textbf{June 2018 -- September 2018}
+\\
+Associate Flight Software Engineer (Post-Graduate) \\\\
+
+Worked on embedded software and hardware systems primarily for large-scale satellite constellation and vehicles. Designed and wrote fault tolerant system critical code and peripheral drivers for flying hardware.
+\end{tabular} \\
+
+%% UCSC
+\\ &
+\begin{tabular}[t]{@{\extracolsep{\fill}} p{\tablefillwidth}}
+{\large{\textbf{University of California, Santa Cruz}}} \hspace*{\fill} \textbf{January 2018 -- December 2018}
+\\
+Graduate Teaching Assistant \\\\
+\textbf{Engineering Capstone Design} (Winter 2018 - Spring 2018):
+Teaching assistant for twenty teams of senior-level engineering students taking their capstone sequence. Meetings with each team for one hour per week where project details are discussed. Additionally assisted teams in their system design, architecture, low-level implementations, and engineering approaches, as well as low-level hardware and software debugging. The projects ranged from autonomous robots to large-scale mesh networking systems.\\
+\\
+\textbf{Microprocessor Systems Design} (Fall 2018):
+Led instructional labs teaching embedded systems design, hardware design, hardware debugging, embedded software design in C, embedded software debugging, and Linux (libusb, systems C on Linux).
+\end{tabular} \\
+
+%% Cityblooms
+\\ &
+\begin{tabular}[t]{@{\extracolsep{\fill}} p{\tablefillwidth}}
+{\large{\textbf{CityBlooms Urban Micro Farms}}} \hspace*{\fill} \textbf{June 2017 -- October 2017}
+\\
+Embedded Software and Hardware Engineering Intern \\\\
+
+Designed and implemented various sensor and peripheral drivers for shipping systems that acquired data from live farming and micro-agricultural environments. This involved writing various system level modules in bare-metal C/C++ on a microcontroller as well as C and Python on a Linux IoT system. Designed a deployment automation system and wrote system level code for a sensor node network.
+\end{tabular} \\
+
+%% Pearl
+\\ &
+\begin{tabular}[t]{@{\extracolsep{\fill}} p{\tablefillwidth}}
+{\large{\textbf{Pearl Automation}}} \hspace*{\fill} \textbf{January 2016 -- December 2016}
+\\
+Firmware Engineering Intern \\\\
+
+Wrote software components and features on both an ARM based controller with a Real-Time Operating System, and a system with an Embedded Linux Operating System.
+Developed a dynamic frequency scaling algorithm for a processor that drastically improved the battery life of a device as well as other physically apparent aspects in a shipping product.
+\end{tabular}
+
+\vspace{1em}
+\\
+
+%% PROJECTS
+\sectiontitle{PROJECTS}
+&
+\begin{tabular}[t]{@{\extracolsep{\fill}} p{\tablefillwidth}}
+%% Jay
+\href{https://www.github.com/PAVx/jay}{\textbf{Jay}} - The custom flight controller software package written for my senior design project, PAVx. This package includes the feedback controller for a quad-copter flight control alongside the drivers and protocols for a 9DOF IMU, IR camera, wireless communication, and GPS. The software was intended to run on a custom made all- embodying printed circuit board which contained an Atmel AVR ATmega 328P, but could also be run on any AVR microcontroller with slight modifications. Jay enables a pod of drones to communicate and scan an unknown area both aerially and autonomously. The aerial pod-aggregated data feeds to a display on a ground station in real time.
+
+%% snOS
+\\
+\href{https://www.github.com/SargisYonan/snOS
+}{\textbf{snOS
+}} - A framework built to assist the creation of low-cost and low-powered IoT systems. With networking capabilities built-in, two or more microcontrollers can run snOS and create a mesh of sensor nodes that can ultimately connect to the internet. A controller in a snOS network could subscribe and publish messages to another snOS device on the network. Messages have the ability to interrupt the operation and thread execution of other controllers in the network, creating a real-time event-driven IoT network.
+\end{tabular}
+
+\vspace{1em}
+\\
+
+%% SKILLS
+\sectiontitle{SKILLS}
+&
+\begin{tabular}[t]{@{\extracolsep{\fill}} p{\tablefillwidth}}
+I actively write code in C/C++ on embedded systems in my personal projects, work, and in the courses I teach. I am also an avid hardware developer, as I tend to make my own electrical circuits for my projects. I also have experience applying feedback controllers on various systems for actuator, attitude, and speed control. I have implemented Kalman filters for sensor fusion and localization purposes on robotic systems. I use MATLAB to verify my controllers, models, and filters.\\\\
+
+\textbf{Software Engineering}: C, C++, Python, Java, Real-Time Operating Systems, Embedded Software Design, x86/MIPS/ARM Assembly
+
+\textbf{Computer Engineering}: Computer Architecture, Digital Logic Design
+
+\textbf{Embedded Systems}: ARM, AVR, PIC, CAN, I2C, UART, SPI, sensor integration, protocol debugging hardware
+
+\textbf{Robotics Engineering}: Sensor Fusion, Feedback Control, Computer Vision, UAVs Mechanical/Electrical Engineering: Sensor Design, Hardware Filter Design, Electro- Mechanical System Design
+
+\textbf{Software/Libraries}: Linux/UNIX, MATLAB, OpenCV, TensorFlow, Eagle CAD 
+
+\textbf{Computational \& Applied Mathematics}: Kalman Filters, Control Theory, Linear Dynamical Systems, Machine Learning, Geostatistics, Frequency Domain \& State Space Analysis
+
+\end{tabular}
+\vspace{1em}
+\\
+
+\end{longtable}
+
+\end{document}
+
